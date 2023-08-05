@@ -1,0 +1,153 @@
+.Hero {
+  height: 830px;
+  @media (max-width: 767px) {
+    height: 700px;
+    padding: 0 20px;
+}
+  background-color: #02020298;
+  background: url("./../../../public/images/Group-93.avif") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 70px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  @media (max-width: 1100px) {
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.35)), url("./../../../public/images/Group-93.avif") ;
+    background-position: center;
+  }
+  @media (max-width: 850px) {
+    background-position: left;
+    align-items: center;
+  }
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    @media (min-width: 1441px) {
+      font-size: 65px;      
+    }
+    @media (max-width: 767px) {
+      font-size: 40px;
+      text-align: center;
+  }
+  }
+  h2 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: white;
+    @media (min-width: 1441px) {
+      font-size: 55px;
+      gap: 15px;
+    }
+    @media (max-width: 767px) {
+      font-size: 27px;
+      text-align: center;
+  }
+  }
+  span {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: white;
+    @media (min-width: 1441px) {
+      font-size: 55px;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+  }
+  }
+  .icons {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    img{
+      cursor: pointer;
+      @media (min-width: 1441px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 13px 40px;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    &:hover .arrow{
+      animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both infinite;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+      gap: 10px;
+      @media (min-width: 1441px) {
+        font-size: 24px;
+      }
+      .arrow {
+        font-size: 22px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: #961062;
+        @media (min-width: 1441px) {
+          font-size: 26px;
+        }
+        
+      }
+    }
+  }
+  .scroll{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    .mouse{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 80px;
+      color: #C1C0C0;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        color: #961062;
+      }
+      @media (max-width: 850px) {
+        font-size: 60px;
+      }
+    }
+    
+    p{
+        font-size: 25px;
+        text-align: center;
+        color: #C1C0C0;
+        font-weight: 300;
+        letter-spacing: 2px;
+        @media (max-width: 850px) {
+          font-size: 22px;
+        }
+    }
+  }
+}

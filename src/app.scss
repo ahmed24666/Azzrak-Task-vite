@@ -1,0 +1,35 @@
+.gradient-text {
+  display: flex;
+  background: linear-gradient(to right, #961062, #0e5f74);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app {
+  margin-bottom: 200px;
+  li {
+    list-style: none !important;
+  }
+  .fade-in {
+    animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both infinite;
+  }
+  .bounce {
+    animation: bounce 3s ease infinite;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-25px);}
+    60% {transform: translateY(-15px);}
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+}

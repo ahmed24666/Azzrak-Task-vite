@@ -1,0 +1,108 @@
+$black: #34435e;
+$white: #ffffff;
+
+.AllFeatures {
+  padding-top: 100px;
+  min-width: 300px;
+  max-width: 800px;
+
+  @media (max-width: 850px) {
+    min-width: 200px;
+  }
+  @media (max-width: 767px) {
+    padding: 50px 20px;
+  }
+  margin: auto;
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 30px;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #961062, #0e5f74);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: section;
+    position: relative;
+    color: $black;
+    @media (max-width: 850px) {
+      font-size: 24px;
+      
+    }
+    @media (max-width: 450px) {
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    &:before {
+      content: counter(section);
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      height: 45px;
+      width: 45px;
+      background: linear-gradient(to right, #961062, #0e5f74);
+      text-align: center;
+      line-height: 45px;
+      color: $white;
+      font-size: 36px;
+      @media (max-width: 850px) {
+        height: 30px;
+      width: 30px;
+      font-size: 24px;
+      }
+    }
+    span {
+      font-size: 35px;
+      font-weight: 700;
+      text-align: center;
+      @media (max-width: 850px) {
+        font-size: 24px;
+      }
+    }
+  }
+  
+  p:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+
+    &:before {
+      left: 100%;
+      margin-left: -30px;
+      @media (max-width: 850px) {
+        margin-left: -23px;
+
+      }
+    }
+  }
+  p:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+
+    &:before {
+      right: 100%;
+      margin-right: -30px;
+      @media (max-width: 850px) {
+        margin-right: -23px;
+
+      }
+    }
+  }
+  p:first-child {
+    border-top: 0;
+  }
+  .left{
+    margin-left: -80px;
+    @media (max-width: 767px) {
+      margin-left: 0px;
+
+    }
+  }
+}

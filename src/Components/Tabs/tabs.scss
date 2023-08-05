@@ -1,0 +1,110 @@
+.TabsCon{
+    padding: 0px 70px;
+    margin-top: 100px;
+    @media (max-width: 767px) {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+    .Tabs{
+        padding: 0px 70px;
+        margin: 30px auto;
+        display: flex;
+        width: 70%;
+        @media (max-width: 767px) {
+            width: 90%;
+            padding: 0 20px;
+        }
+        @media (max-width: 450px) {
+            width: 100%;
+            padding: 0;
+        }
+        justify-content: space-between;
+        position: relative;
+        button{
+            outline: none;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            font-size: 25px;
+            @media (min-width: 1441px) {
+                font-size: 27px;
+            }
+            @media (max-width: 850px) {
+                font-size: 22px;
+            }
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
+            @media (max-width: 450px) {
+                font-size: 15px;
+            }
+            font-weight: 400;
+            color: #868686;
+            background: transparent;
+            position: relative;
+            z-index: 3;
+            cursor: pointer;
+        }
+        button.active{
+            font-weight: 600;
+            color: white;
+        }
+        .motionSpan{
+            background: linear-gradient(to right, #961062, #0E5F74);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: 3px;
+        }
+        .line{
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #961062, #0E5F74);
+            bottom: 0;
+            
+            
+        }
+        .dot1{
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            left: 0;
+            background: linear-gradient(to right, #961062, #0E5F74);
+            bottom: -3px;
+            rotate: -135deg;
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+        .dot2{
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            right: 0;
+            background: linear-gradient(to right, #961062, #0E5F74);
+            bottom: -3px;
+            rotate: -135deg;
+            @media (max-width: 450px) {
+                display: none;
+            }
+        }
+    }
+    p{
+        font-size: 27px;
+        font-weight: 400;
+        text-align: center;
+        @media (min-width: 1441px) {
+            font-size: 31px;
+          }
+          @media (max-width: 850px) {
+            font-size: 25px;
+        }
+          @media (max-width: 767px) {
+            font-size: 20px;
+        }
+    }
+}
